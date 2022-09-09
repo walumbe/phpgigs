@@ -6,8 +6,7 @@
             ></i>
         </div>
         <input
-            type="text"
-            name="search"
+            type="text" name="search"
             class="h-14 w-full pl-10 pr-20 rounded-lg z-0 focus:shadow focus:outline-none"
             placeholder="Search Laravel Gigs..."
         />

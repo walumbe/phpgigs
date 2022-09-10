@@ -1,8 +1,9 @@
 <?php
 
+use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ListingController;
 
 /*
@@ -36,6 +37,9 @@ Route::delete('/listings/{listing}', [ListingController::class, 'delete']);
 
 // Single listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
+
+// show Register/create Form
+Route::get('/register', [UserController::class, 'register']);
 
 // Route::get('/posts/{id}', function($id){
 //     return response('Posts '.$id);

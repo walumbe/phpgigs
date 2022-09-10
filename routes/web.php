@@ -47,6 +47,12 @@ Route::post('/users', [UserController::class, 'store']);
 // Log user out
 Route::post('/logout', [UserController::class, 'logout']);
 
+// Show login form
+Route::get('/login', [UserController::class, 'login']);
+
+// Log in User
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
 // Route::get('/posts/{id}', function($id){
 //     return response('Posts '.$id);
 // })->where('id', '[0-9]+');

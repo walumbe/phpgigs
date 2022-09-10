@@ -25,10 +25,14 @@ Route::get('/listings/create', [ListingController::class, 'create']);
 // store listing request
 Route::post('/listings', [ListingController::class, 'store']);
 
+// Show edit Form
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
+
+// Update listing
+Route::put('/listings/{listing}', [ListingController::class, 'update']);
+
 // Single listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
-
-// common resource Routes
 
 // Route::get('/posts/{id}', function($id){
 //     return response('Posts '.$id);

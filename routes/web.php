@@ -41,6 +41,9 @@ Route::get('/listings/{listing}', [ListingController::class, 'show']);
 // show Register/create Form
 Route::get('/register', [UserController::class, 'register']);
 
+// Create new User
+Route::post('/users', [UserController::class, 'store']);
+
 // Route::get('/posts/{id}', function($id){
 //     return response('Posts '.$id);
 // })->where('id', '[0-9]+');

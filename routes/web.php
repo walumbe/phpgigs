@@ -44,6 +44,9 @@ Route::get('/register', [UserController::class, 'register']);
 // Create new User
 Route::post('/users', [UserController::class, 'store']);
 
+// Log user out
+Route::post('/logout', [UserController::class, 'logout']);
+
 // Route::get('/posts/{id}', function($id){
 //     return response('Posts '.$id);
 // })->where('id', '[0-9]+');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Log;
 
 class ListingController extends Controller
 {
@@ -66,6 +67,7 @@ class ListingController extends Controller
     // update listing
     public function update(Request $request, Listing $listing){
         
+        Log::info($listing->user_id);
         // make sure loggedin user is owner
         if($listing->user_id != auth()->id()){
             abort(403, 'Unauthorised Action');
@@ -89,7 +91,7 @@ class ListingController extends Controller
 
         // Session::flash('message', 'Listing Created Successfully!');
 
-        return back()->with('message', 'Listing updated Successfully!');
+        return redirect('/')->with('message', 'Listing updated Successfully!');
     }
 
     // delete listing
